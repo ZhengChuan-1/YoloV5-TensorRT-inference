@@ -1,3 +1,9 @@
 # YoloV5-TensorRT-inference
-This project is used to convert the ONNX model exported from YOLOv5 into a Tensor engine and provide a C++inference process.
-此项目用于将yolov5导出的onnx模型进行tensor引擎转换，并提供C++推理的过程。
+这是一个使用C++推理的tensorRT引擎文件的教程。
+
+# 使用步骤
+# 一、onnx文件准备
+## 运行yolov5项目下的export.py，导出所需onnx文件
+
+# 二、onnx转engine(trt)文件
+
