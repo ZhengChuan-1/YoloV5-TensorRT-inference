@@ -180,7 +180,7 @@ int main()
             cv::Point bottomRight(it->box.x + it->box.width, it->box.y + it->box.height);
             cv::rectangle(input_image, topLeft, bottomRight, cv::Scalar(0, 0, 255), 2);
             std::stringstream buff;
-            buff.precision(2);//覆盖默认精度,保留小数位
+            buff.precision(2);//覆盖默认精度,保留2位小数
             buff.setf(std::ios::fixed);
             buff << it->confidence;
             string text =names[it->label] + " " + buff.str();
