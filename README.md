@@ -2,7 +2,6 @@
 这是一个使用C++推理的tensorRT引擎文件的教程。
 
 
-
 ## 使用步骤
 ## 一、onnx文件准备
 ##### 运行原作者yolov5项目下的export.py，导出所需onnx文件
@@ -14,3 +13,10 @@
 ##### sudo ./trtexec --onnx = yolov5s.onnx --saveEngine = yolov5s.trt
 ##### trtexec文件在TensorRT目录下的bin文件。
 
+## 三、Cmake
+##### CMakeLists.txt 路径依赖替换成自己的路径
+##### cd ./build/
+##### cmake ..
+##### make
+##### 现在build文件夹中生成一个可执行文件inference
+##### ./inference 运行即刻完成推理输出
