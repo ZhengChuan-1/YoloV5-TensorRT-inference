@@ -29,7 +29,7 @@ class MyLogger : public nvinfer1::ILogger {
 
 int main()
 {
-//一、图像处理
+//一、图像处理（把输入图片尺寸resize成640 X 640）（宽高不一样在空白处作填充）
     const int model_width = 640;
     const int model_height = 640;
 
