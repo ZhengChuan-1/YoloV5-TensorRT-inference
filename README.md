@@ -1,6 +1,6 @@
 # YoloV5-TensorRT-inference
 这是一个使用C++推理的tensorRT引擎文件的案例。<br/><br/>
-系统：Ubuntu 编译：vscode + Cmake 
+系统：Ubuntu   编译：VScode + Cmake 
 <br/><br/>
 ## <font color=“blue”>使用步骤</font>
 ## 一、onnx文件准备
