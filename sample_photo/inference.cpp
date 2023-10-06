@@ -29,7 +29,7 @@ class MyLogger : public nvinfer1::ILogger {
 
 int main()
 {
-//一、图像处理（把输入图片尺寸resize成640 X 640）（宽高不一样在空白处作填充）
+//一、图像处理
     const int model_width = 640;
     const int model_height = 640;
 
@@ -80,7 +80,7 @@ int main()
     engine_file_stream << ifs.rdbuf();
     ifs.close();
 
-    engine_file_stream.seekg(0, std::ios::end);         //指针移动到文件流的结尾
+    engine_file_stream.seekg(0, std::ios::end);         //先把文件输入流指针定位到文档末尾来获取文档的长度
     const int model_size = engine_file_stream.tellg();  //获取文件流的总长度
     engine_file_stream.seekg(0, std::ios::beg);
     void *model_mem = malloc(model_size);               //开辟一样长的空间
@@ -114,7 +114,7 @@ int main()
     // 给模型输出数据分配相应的CPU内存
     float *output_buffer = new float[output_size];
 
-//四、投入数据
+    //投入数据
     cudaStream_t stream;
     cudaStreamCreate(&stream);
     // 拷贝输入数据
@@ -140,7 +140,7 @@ int main()
     delete runtime;
     delete[] input_blob;
 
-//五、获取输出结果output_buffer,放入objs  xywh为中心点坐标 和宽高
+//四、输出结果output_buffer，放入objs  xywh为中心点坐标 和宽高
     float *ptr = output_buffer;
     std::vector<Object> objs;
     for (int i = 0; i < 25200; ++i) {
@@ -168,10 +168,10 @@ int main()
         ptr += 85;
     }  // i loop
 
-//六、NMS非极大值抑制
+//五、NMS非极大值抑制
     vector<list<Object>> finalll = NMS(objs);
 
-//七、画框
+//六、画框
     int row = sizeof(finalll) / sizeof(finalll[0]);
     for(int i = 0; i <= row; i++){
         list<Object>::iterator it = finalll[i].begin();
@@ -180,7 +180,7 @@ int main()
             cv::Point bottomRight(it->box.x + it->box.width, it->box.y + it->box.height);
             cv::rectangle(input_image, topLeft, bottomRight, cv::Scalar(0, 0, 255), 2);
             std::stringstream buff;
-            buff.precision(2);//覆盖默认精度,保留2位小数
+            buff.precision(2);  //覆盖默认精度,置信度保留2位小数
             buff.setf(std::ios::fixed);
             buff << it->confidence;
             string text =names[it->label] + " " + buff.str();
