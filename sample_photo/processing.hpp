@@ -57,9 +57,10 @@ vector<list<Object>> NMS(std::vector<Object> objs, float iou_thres = 0.45){
     float x1, y1, x1_w, y1_h,x2, y2, x2_w, y2_h;
     float x_box, y_box, x_w_box, y_h_box, w_box, h_box;
     float S1,S2,SBOX,res_iou;
-    int row = sizeof(NMS_List) / sizeof(NMS_List[0]);  //行数
+
+    int row = NMS_List.size();  //行数     列数：NMS_List[0].size()
     int tmp;
-    for(int i = 0; i <= row ; i++)  //不同分类的循环
+    for(int i = 0; i < row ; i++)  //不同分类的循环
     {
         tmp = 0;
         list<Object>::iterator it = NMS_List[i].begin();

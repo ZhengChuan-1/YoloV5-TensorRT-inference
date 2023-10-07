@@ -34,7 +34,8 @@ int main()
     const int model_height = 640;
 
     //string image_path = "/home/zc/C++_TensorRT_inference/sample_photo/images/bus.jpg";
-    string image_path = "/home/zc/C++_TensorRT_inference/sample_photo/images/zidane.jpg";  //填写自己图片路径(需要绝对路径)
+    string image_path = "/home/zc/C++_TensorRT_inference/sample_photo/images/马路行人.jpg";
+    //string image_path = "/home/zc/C++_TensorRT_inference/sample_photo/images/zidane.jpg";  //填写自己图片路径(需要绝对路径)
     float* input_blob = new float[model_height * model_width * 3];
 
     cv::Mat input_image = cv::imread(image_path);
@@ -172,8 +173,8 @@ int main()
     vector<list<Object>> finalll = NMS(objs);
 
 //六、画框
-    int row = sizeof(finalll) / sizeof(finalll[0]);
-    for(int i = 0; i <= row; i++){
+    int row = finalll.size();
+    for(int i = 0; i < row; i++){
         list<Object>::iterator it = finalll[i].begin();
         while(it != finalll[i].end()){
             cv::Point topLeft(it->box.x, it->box.y);
@@ -189,7 +190,8 @@ int main()
         }
     }
     //cv::imwrite("_bus.jpg", input_image);
-    cv::imwrite("_zidane.jpg", input_image);
+    //cv::imwrite("_zidane.jpg", input_image);
+    cv::imwrite("_马路行人.jpg", input_image);
     return 0;
 }
 
