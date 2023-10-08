@@ -14,14 +14,15 @@
 <br/><br/>
 ## 三、Cmake
 ##### CMakeLists.txt 路径依赖替换成自己的路径
-##### 代码中文件地址替换自己路径
+##### 代码中图片、engine(trt)文件、保存路径 替换成自己路径
 ##### VScode项目中按ctrl+shift+P，选择Cmake配置，此时生成build文件夹 
 ##### cd ./build/
 ##### cmake ..
 ##### make
 ##### 现在build文件夹中生成一个可执行文件infer
-##### 在sample_photo中：./infer 运行即可完成推理输出
+##### 在sample_photo中：
+##### 命令行输入./infer 运行即可完成推理输出
 
-##### 在sample_video中：需要添加视频源文件路径和输出路径  
+##### 在sample_video中：命令行输入需要添加视频源文件路径和输出路径两个参数
 ##### 例： ./infer /dev/video0 /home/zc/C++_TensorRT_inference/sample_video/video/0_0.mp4
 #####     ./infer /home/zc/C++_TensorRT_inference/sample_video/video/0.mp4 /home/zc/C++_TensorRT_inference/sample_video/video/0_0.mp4
