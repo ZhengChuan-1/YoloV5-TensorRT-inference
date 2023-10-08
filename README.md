@@ -15,6 +15,7 @@
 ## 三、Cmake
 ##### CMakeLists.txt 路径依赖替换成自己的路径
 ##### 代码中文件地址替换自己路径
+##### VScode项目中按ctrl+shift+P，选择Cmake配置，此时生成build文件夹 
 ##### cd ./build/
 ##### cmake ..
 ##### make
