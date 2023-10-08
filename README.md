@@ -19,5 +19,9 @@
 ##### cd ./build/
 ##### cmake ..
 ##### make
-##### 现在build文件夹中生成一个可执行文件inference
-##### ./inference 运行即刻完成推理输出
+##### 现在build文件夹中生成一个可执行文件infer
+##### 在sample_photo中：./infer 运行即可完成推理输出
+
+##### 在sample_video中：需要添加视频源文件路径和输出路径  
+##### 例： ./infer /dev/video0 /home/zc/C++_TensorRT_inference/sample_video/video/0_0.mp4
+#####     ./infer /home/zc/C++_TensorRT_inference/sample_video/video/0.mp4 /home/zc/C++_TensorRT_inference/sample_video/video/0_0.mp4
