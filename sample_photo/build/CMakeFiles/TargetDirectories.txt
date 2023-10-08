@@ -1,0 +1,3 @@
+/home/zc/C++_TensorRT_inference/sample_photo/build/CMakeFiles/rebuild_cache.dir
+/home/zc/C++_TensorRT_inference/sample_photo/build/CMakeFiles/edit_cache.dir
+/home/zc/C++_TensorRT_inference/sample_photo/build/CMakeFiles/infer.dir
