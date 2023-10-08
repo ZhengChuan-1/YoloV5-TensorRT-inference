@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/zc/C++_TensorRT_inference/sample_video/build",
+  "command": "/usr/bin/g++   -I/home/zc/TensorRT-8.6.1.6/include -I/home/zc/TensorRT-8.6.1.6/samples/common -I/usr/local/cuda-11.8/include -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/infer.dir/inference_video.o -c /home/zc/C++_TensorRT_inference/sample_video/inference_video.cpp",
+  "file": "/home/zc/C++_TensorRT_inference/sample_video/inference_video.cpp"
+}
+]
