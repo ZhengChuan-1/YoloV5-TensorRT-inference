@@ -11,7 +11,8 @@
 ##### 使用官方转换器trtexec(文件填写自己对应的路径)
 ##### sudo ./trtexec --onnx = yolov5s.onnx --saveEngine = yolov5s.trt
 ##### trtexec文件在TensorRT目录下的bin文件。
-<br/><br/>
+
+yolov5s.trt文件百度云下载：链接: https://pan.baidu.com/s/1nmrxr7n19ZxwldBJw64USA?pwd=QWER 提取码: QWER
 ## 三、Cmake
 ##### CMakeLists.txt 路径依赖替换成自己的路径
 ##### 代码中图片、engine(trt)文件、保存路径 替换成自己路径
