@@ -114,10 +114,10 @@ int main()
     // 给模型输出数据分配相应的CPU内存
     float *output_buffer = new float[output_size];
 
-    //创建数据流
+    //
     cudaStream_t stream;
     cudaStreamCreate(&stream);
-    // 拷贝输入数据到stream
+    // 拷贝输入数据
     cudaMemcpyAsync(buffers[0], input_blob,input_size * sizeof(float),
                     cudaMemcpyHostToDevice, stream);
     // 投入数据流、执行推理
