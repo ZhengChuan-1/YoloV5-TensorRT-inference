@@ -9,7 +9,7 @@
 <br/><br/>
 ## 二、onnx转engine(trt)文件
 ##### 使用官方转换器trtexec(文件填写自己对应的路径)
-##### sudo ./trtexec --onnx = yolov5s.onnx --saveEngine = yolov5s.trt
+##### sudo ./trtexec --onnx=yolov5s.onnx --saveEngine=yolov5s.trt
 ##### trtexec文件在TensorRT目录下的bin文件。
 
 yolov5s.trt文件百度云下载：链接: https://pan.baidu.com/s/1nmrxr7n19ZxwldBJw64USA?pwd=QWER 提取码: QWER
